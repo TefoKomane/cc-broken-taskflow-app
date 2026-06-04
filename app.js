@@ -39,16 +39,22 @@ function addTask(text) {
 
 
 function toggleTask(id) {
-  tasks = tasks.map(function (id) {
-    if (id.id === id) {
-      return { ...id, completed: !id.completed };
+  // Loop through all tasks and find the one with the matching id
+  tasks = tasks.map(function (task) {
+
+    // If the current task matches the clicked checkbox task
+    if (task.id === id) {
+      // Toggle the completed state (true → false, false → true)
+      return { ...task, completed: !task.completed };
     }
-    return id;
+
+    // Return unchanged task if it doesn't match
+    return task;
   });
 
+  // Re-render the UI so checkbox state updates visually
   renderTasks();
 }
-
 
 function deleteTask(id) {
   tasks = tasks.filter(function (task) {
