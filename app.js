@@ -73,7 +73,7 @@ function getFilteredTasks() {
   }
   return tasks;
 }
-
+ 
 
 function renderTasks() {
   const filtered = getFilteredTasks();
