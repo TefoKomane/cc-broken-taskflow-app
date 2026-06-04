@@ -9,7 +9,7 @@ const statsEl = document.getElementById('stats');
 const filterBtns = document.querySelectorAll('.filters button');
 
 
-addBtn.addEventListener('mouseover', function () {
+addBtn.addEventListener('click', function () {
   const text = taskInput.value.trim();
   if (text === '') return;
   addTask(text);
@@ -60,7 +60,7 @@ function deleteTask(id) {
 
 function getFilteredTasks() {
   if (currentFilter === 'active') {
-    return tasks.filter(function (task) { return task.completed === true; });
+    return tasks.filter(function (task) { return task.completed === false; });
   }
   if (currentFilter === 'completed') {
     return tasks.filter(function (task) { return task.completed === true; });
