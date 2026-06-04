@@ -8,6 +8,20 @@ const taskList = document.getElementById('task-list');
 const statsEl = document.getElementById('stats');
 const filterBtns = document.querySelectorAll('.filters button');
 
+//Tefo komane: add "save" in browser local storage and load tasks on page refresh//
+function saveTasks() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadTasks() {
+  const savedTasks = localStorage.getItem('tasks');
+  if (savedTasks) {
+    tasks = JSON.parse(savedTasks);
+    nextId = Math.max(...tasks.map(t => t.id), 0) + 1;
+  }
+}
+
+loadTasks();
 
 addBtn.addEventListener('click', function () {
   const text = taskInput.value.trim();
@@ -34,6 +48,7 @@ function addTask(text) {
   };
 
   tasks.push(task);
+  saveTasks();
   renderTasks();
 }
 
