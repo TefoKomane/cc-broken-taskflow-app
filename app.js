@@ -105,10 +105,9 @@ function renderTasks() {
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-btn';
     deleteBtn.textContent = '×';
-    deleteBtn.addEventListener('click', function (event) {
-      deleteTask(event.target.id);
-    });
-
+    deleteBtn.addEventListener('click', function () {
+  deleteTask(task.id);  //Qhawekazi fixed the delete button not working by passing the correct task id to the deleteTask function
+});
     li.appendChild(checkbox);
     li.appendChild(span);
     li.appendChild(deleteBtn);
