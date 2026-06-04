@@ -1,11 +1,11 @@
-# 🐞 Bug Report — Week 6 Broken Todo App
+#  Bug Report — Week 6 Broken Todo App
 
 ## Project
 JavaScript Todo App — DOM Manipulation & Events
 
 ---
 
-# 🧩 Bug 1 — Checkbox Not Updating Task Completion
+#  Bug 1 — Checkbox Not Updating Task Completion
 
 ## Description
 The checkbox for each task was not updating the task completion state when clicked. Users could interact with the checkbox, but the task would not toggle between completed and active states.
@@ -74,7 +74,7 @@ function toggleTask(id) {
 
 ---
 
-# 🧩 Bug 2 — Delete Button Not Removing Correct Task
+#  Bug 2 — Delete Button Not Removing Correct Task
 
 ## Description
 The delete button failed to remove the selected task correctly when clicked.
@@ -123,7 +123,7 @@ deleteBtn.addEventListener('click', function () {
 
 ---
 
-# 🧩 Bug 3 — Active Filter Showing Incorrect Tasks
+#  Bug 3 — Active Filter Showing Incorrect Tasks
 
 ## Description
 The “Active” filter displayed completed tasks instead of incomplete tasks.
@@ -202,7 +202,7 @@ function getFilteredTasks() {
 
 ---
 
-# 🧩 Bug 4 — Add Button Triggering on Hover
+#  Bug 4 — Add Button Triggering on Hover
 
 ## Description
 Tasks were being added when hovering over the add button instead of clicking it.
@@ -259,7 +259,7 @@ addBtn.addEventListener('click', function () {
 
 ---
 
-# 🧩 Bug 5 — Priority Dropdown Not Resetting
+#  Bug 5 — Priority Dropdown Not Resetting
 
 ## Description
 After adding a task, the priority dropdown remained on the previously selected value instead of resetting to the default option.
@@ -305,7 +305,7 @@ document.getElementById("priority").value = "medium";
 
 ---
 
-# ✅ Final Outcome
+#  Final Outcome
 
 After applying all fixes:
 
